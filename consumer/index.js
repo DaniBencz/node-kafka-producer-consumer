@@ -8,10 +8,13 @@ var consumer = new Kafka.KafkaConsumer({
 
 consumer.connect();
 
-consumer.on('ready', () => {
-  console.log('consumer ready..')
-  consumer.subscribe(['test']);
-  consumer.consume();
-}).on('data', function(data) {
+consumer.on(
+  'ready',
+  () => {
+    console.log('consumer ready..');
+    consumer.subscribe(['test']);
+    consumer.consume();
+  }
+).on('data', function (data) {
   console.log(`received message: ${eventType.fromBuffer(data.value)}`);
 });

@@ -13,5 +13,10 @@
   "dependencies": {
     "avsc": "^5.6.2",
     "node-rdkafka": "^2.11.0"
+  },
+  "repository": {
+    "type": "git",
+    "original": "https://github.com/kriscfoster/node-kafka-producer-consumer.git",
+    "url": "https://github.com/DaniBencz/node-kafka-producer-consumer.git"
   }
 }
